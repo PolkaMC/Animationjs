@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Circles</title>
+        <style>
+            canvas {
+                border: 1px solid #7B899B;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "CanvasContainer">
+            <canvas id = "drawingCanvas" width = "500" height = "340"></canvas>
+        </div>
+        <div>
+            <button onclick = "addBall()">Add ball</button>
+            <button onclick = "clearBalls()">Clear canvas</button>
+        </div>
+        <div>
+            Ball size:<input id = "ballSize" type = "number" min = "0" max = "50" value = "15">
+            <input id = "connectedBalls" type = "checkbox">Add connecting line<br>
+        </div>
+
+        <script src = "script.js"></script>
+    </body>
+</html>

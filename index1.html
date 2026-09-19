@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Circles</title>
+        <style>
+            canvas {
+                border: 1px solid #7B899B;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id = "drawingCanvas" width = "500" height = "300"></canvas>
+    <script>
+        let canvas;
+        let context;
+
+        window.onload = function() {
+            canvas = document.getElementById("drawingCanvas");
+            context = canvas.getContext("2d");
+
+            setTimeout("drawFrame()", 20);
+        }
+
+        let squarePosition_x = 10;
+        let squarePosition_y = 0;
+
+        function drawFrame() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.beginPath();
+
+            context.rect(squarePosition_x, squarePosition_y, 10, 10);
+            context.lineStyle = "#109bfc";
+            context.lineWidth = 1;
+            context.stroke();
+
+            squarePosition_y += 1;
+
+            setTimeout("drawFrame()", 20)
+        }
+    </script>
+    </body>
+</html>
